@@ -11,6 +11,24 @@ Personal portfolio showcasing my work as a **GIS Analyst / ArcGIS Enterprise Adm
 * **Research:** Academic publications and research work
 * **Achievements & Certifications:** Professional milestones and credentials
 
+## 🔹 Project structure
+
+```
+/
+├── index.html          # Home
+├── experience.html
+├── projects.html
+├── research.html
+├── achievements.html
+├── css/
+│   └── style.css       # Main styles
+├── js/
+│   └── icon.js         # Nav toggle
+├── images/             # All images (profile, certs, project thumbs, favicon)
+├── documents/          # Resume PDF
+└── projects/           # Project detail pages (e.g. code-enforcement-gis-automation.html)
+```
+
 ## 🔹 Tech Stack
 
 * HTML, CSS (custom GIS-themed design)
