@@ -693,16 +693,11 @@ h3 {
   width: 100%;
 }
 
-.about-text {
-  margin-top: var(--space-lg);
-}
-
 .about-text p {
-  line-height: 1.7;
-  font-size: var(--text-base);
-  font-family: var(--font-sans);
-  color: var(--text-secondary);
-  margin-bottom: var(--space-md);
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+  hyphens: auto;
 }
 
 .about-text strong {
