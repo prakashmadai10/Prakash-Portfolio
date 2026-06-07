@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prakash Madai | Projects</title>
+  <script src="js/theme.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/prototype.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body class="page-projects">
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="container navbar" id="mynavbar">
+      <div class="nav-links">
+        <a href="index.html">HOME</a><a href="experience.html">EXPERIENCE</a><a href="projects.html" class="active">PROJECTS</a><a href="research.html">RESEARCH</a><a href="achievements.html">ACHIEVEMENTS</a>
+      </div>
+      <a href="index.html#contact" class="nav-cta">LET'S CONNECT</a>
+      <button class="nav-toggle" type="button" onclick="myFunction()" aria-label="Toggle navigation" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1 class="ph-title">Projects</h1>
+      <p class="ph-desc">Automation scripts, web GIS apps, dashboards, and geospatial data tools built in production environments.</p>
+      <div class="page-metrics" aria-label="Project focus areas">
+        <span><i class="fa fa-globe" aria-hidden="true"></i> WEB GIS</span>
+        <span><i class="fa fa-code" aria-hidden="true"></i> PYTHON + SQL</span>
+        <span><i class="fa fa-line-chart" aria-hidden="true"></i> OPERATIONAL ANALYTICS</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar">
+        <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" type="button" data-filter="automation" aria-pressed="false">Automation</button>
+        <button class="filter-btn" type="button" data-filter="web-apps" aria-pressed="false">Web GIS Apps</button>
+        <button class="filter-btn" type="button" data-filter="dashboards" aria-pressed="false">Dashboards</button>
+        <button class="filter-btn" type="button" data-filter="governance" aria-pressed="false">Governance</button>
+        <button class="filter-btn" type="button" data-filter="monitoring" aria-pressed="false">Monitoring</button>
+      </div>
+
+      <!-- PROJECT GRID -->
+      <div class="proj-grid" id="projGrid">
+
+        <!-- Zoning Cases Dashboard -->
+        <div class="proj-card" data-tags="gis dashboards governance planning web-apps">
+          <div class="proj-meta">
+            <div class="proj-cat">Planning & Zoning</div>
+            <div class="proj-date">ArcGIS Dashboard</div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/ZONING.png" alt="Zoning Cases Dashboard – City of Midland" class="proj-img"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">Zoning Cases Dashboard – City of Midland</div>
+            <p class="proj-desc">
+              An interactive GIS dashboard for tracking zoning applications, hearing status, plan reviews,
+              and spatial distribution of cases to support planning staff and decision-makers.
+            </p>
+
+            <a class="proj-btn"
+              href="https://geostation-comgis.hub.arcgis.com/apps/b19c3643d9df41d7942e47ac5f040d28/explore"
+              target="_blank">
+              OPEN DASHBOARD
+            </a>
+          </div>
+        </div>
+
+
+
+        <!-- 8 (NEW) Fire Hydrants Locator -->
+        <div class="proj-card" data-tags="web-apps">
+          <div class="proj-meta">
+            <div class="proj-cat">Web GIS App</div>
+            <div class="proj-date">ArcGIS Instant Apps</div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/utilities.png" alt="Fire hydrants locator map" class="proj-img"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">Fire Hydrants Locator</div>
+            <p class="proj-desc">
+              A nearby search experience for locating hydrants quickly in the field (distance slider + map-centric
+              workflow).
+            </p>
+
+            <a class="proj-btn"
+              href="https://ogis.maps.arcgis.com/apps/instant/nearby/index.html?appid=1907fc1e990f4295843fe9bced60bd3e&sliderDistance=500"
+              target="_blank">
+              OPEN APP
+            </a>
+          </div>
+        </div>
+
+        <!-- 9 (LOCAL DETAIL PAGE EXAMPLE) -->
+        <div class="proj-card" data-tags="governance">
+          <div class="proj-meta">
+            <div class="proj-cat">Most Travelled Corridor - Code Enforcement</div>
+            <div class="proj-date">ArcGIS Dashboard</div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/cover.png" alt="Project detail page" class="proj-img"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">Most Travelled Corridor - Code Enforcement</div>
+            <p class="proj-desc">
+              A dedicated project page hosted inside this portfolio (screenshots, architecture, workflow, and outcomes).
+            </p>
+
+            <a class="proj-btn" href="projects/code-enforcement-gis-automation.html">
+              OPEN DETAILS
+            </a>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="proj-card" data-tags="governance monitoring">
+          <div class="proj-meta">
+            <div class="proj-cat">Governance</div>
+            <div class="proj-date">Portal + AGOL Audit</div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/d1.jpg" alt="Audit toolkit" class="proj-img"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">ArcGIS Portal & AGOL Audit Toolkit</div>
+            <p class="proj-desc">
+              Audit reporting for users, items, sharing, and governance checks to support compliance and cleanup
+              initiatives.
+            </p>
+
+            <!-- If you want this one to open your local detail page instead of GitHub, change href to x.html -->
+            <a class="proj-btn" href="https://github.com/prakashmadai10/ArcGIS-for-Portal-and-AGOL-AUDIT/tree/main"
+              target="_blank">
+              LEARN MORE
+            </a>
+          </div>
+        </div>
+        <!-- 1 -->
+        <div class="proj-card" data-tags="automation web-apps">
+          <div class="proj-meta">
+            <div class="proj-cat">GIS Automation</div>
+            <div class="proj-date">ArcGIS Online • Backup</div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/d2.jpg" alt="AGOL backup project" class="proj-img"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">AGOL Hosted Feature Layer Backup + FGDB Cleanup</div>
+            <p class="proj-desc">
+              Automated backups for hosted feature layers to FGDB and cleanup routines for maintaining a reliable
+              production environment.
+            </p>
+
+            <a class="proj-btn"
+              href="https://github.com/prakashmadai10/AGOL-Hosted-Feature-Layer-Backup-FGDB-Cleanup-Python"
+              target="_blank">
+              LEARN MORE
+            </a>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="proj-card" data-tags="automation">
+          <div class="proj-meta">
+            <div class="proj-cat">ArcGIS Online</div>
+            <div class="proj-date">ArcGIS Hub (Open Data) </div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/bkp.png" alt="Bulk export enablement" class="proj-img"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">Enable Bulk Export/Extract on Hosted Layers & Views</div>
+            <p class="proj-desc">
+              Bulk-enable export/extract capabilities across hosted feature layers and views to streamline operations
+              and compliance.
+            </p>
+
+            <a class="proj-btn"
+              href="https://github.com/prakashmadai10/ArcGIS-Online-Enable-Bulk-Export-Extract-on-Hosted-Feature-Layers-Views"
+              target="_blank">
+              LEARN MORE
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="proj-card" data-tags="monitoring governance">
+          <div class="proj-meta">
+            <div class="proj-cat">Data Synchronization</div>
+            <div class="proj-date">Portal ↔ AGOL</div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/d1.jpg" alt="Sync log collector" class="proj-img"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">Distributed Collaboration Sync Log Collector</div>
+            <p class="proj-desc">
+              Collects and summarizes sync logs for Portal–AGOL collaboration to speed up troubleshooting and reporting.
+            </p>
+
+            <a class="proj-btn"
+              href="https://github.com/prakashmadai10/Distributed-Collaboration-Sync-Log-Collector-Portal-AGOL"
+              target="_blank">
+              LEARN MORE
+            </a>
+          </div>
+        </div>
+        <!-- SQL Server Monitoring -->
+        <div class="proj-card" data-tags="monitoring automation sql-server">
+          <div class="proj-meta">
+            <div class="proj-cat">Database Monitoring</div>
+            <div class="proj-date">Jobs & Backups</div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/db.jpeg" alt="SQL Server jobs and backup monitoring" class="proj-img"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">SQL Server Backup & Job Monitoring Automation</div>
+            <p class="proj-desc">
+              Automated monitoring of SQL Server Agent job failures and database backup status across
+              multiple instances, generating formatted Excel reports and emailing alerts to reduce
+              manual DBA effort and improve reliability.
+            </p>
+
+            <a class="proj-btn" href="https://github.com/prakashmadai10/SQL-Server-backup-and-Job-monitoring"
+              target="_blank">
+              LEARN MORE
+            </a>
+          </div>
+        </div>
+
+        <!-- Real-Time Analytics -->
+        <div class="proj-card" data-tags="real-time web-apps">
+          <div class="proj-meta">
+            <div class="proj-cat">Real-Time Analytics</div>
+            <div class="proj-date">Visualization</div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/1781.jpg" alt="Real-time analytics" class="proj-img"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">Real-Time Geospatial Analytics & Visualization</div>
+            <p class="proj-desc">
+              Demonstrates real-time geospatial analytics and visualization patterns for operational monitoring and
+              decision support.
+            </p>
+
+            <a class="proj-btn" href="https://github.com/prakashmadai10/Real-Time-Geospatial-Analytics-Visualization"
+              target="_blank">
+              LEARN MORE
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-compact">
+      <p class="copyright"><small>&copy; 2026 Prakash Madai</small></p>
+    </div>
+  </footer>
+
+  <script src="js/icon.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/scroll-animations.js"></script>
+
+  <!-- FILTER SCRIPT -->
+  <script>
+    (function () {
+      const btns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.proj-card');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('active'); });
+          btns.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+          btn.classList.add('active');
+          btn.setAttribute('aria-pressed', 'true');
+          var tag = btn.dataset.filter;
+          cards.forEach(function (card) {
+            if (tag === 'all' || card.dataset.tags.split(' ').includes(tag)) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
