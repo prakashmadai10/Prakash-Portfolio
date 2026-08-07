@@ -81,6 +81,69 @@ html {
   scrollbar-gutter: stable;
 }
 
+/* ── Skip link ─────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -200%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1.2rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--green);
+  transition: top 0.12s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ── Scroll anchor offset (clears sticky nav) ───────── */
+section[id],
+.section[id] {
+  scroll-margin-top: 76px;
+}
+
+/* ── Hero dot-grid background ──────────────────────── */
+.hero.hero-gis {
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ── Cursor pointer on clickable non-button elements ── */
+.proj-btn,
+.job-btn,
+.job-extra-btn,
+.filter-btn {
+  cursor: pointer;
+}
+
+/* ── Footer social links ───────────────────────────── */
+.footer-social {
+  display: flex;
+  gap: 1.1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  transition: color 180ms ease;
+}
+.footer-social a:hover {
+  color: var(--green);
+}
+
 body,
 .case-study-page {
   min-height: 100vh;
@@ -547,7 +610,7 @@ p {
   border-color: var(--ink);
   background: var(--paper-light);
   color: var(--ink);
-  box-shadow: 6px 6px 0 var(--acid);
+  box-shadow: 6px 6px 0 var(--green-bright);
 }
 
 .btn.primary:hover {

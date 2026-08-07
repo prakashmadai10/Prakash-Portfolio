@@ -16,15 +16,8 @@
     return;
   }
 
-  // Stagger siblings within the same parent container
+  var vh = window.innerHeight;
   var seen = new Map();
-  targets.forEach(function (el) {
-    var parent = el.parentElement;
-    var idx = seen.has(parent) ? seen.get(parent) : 0;
-    seen.set(parent, idx + 1);
-    el.classList.add('reveal');
-    el.style.transitionDelay = Math.min(idx * 0.08, 0.3) + 's';
-  });
 
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -35,5 +28,22 @@
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-  targets.forEach(function (el) { observer.observe(el); });
+  targets.forEach(function (el) {
+    var rect = el.getBoundingClientRect();
+    var alreadyVisible = rect.top < vh && rect.bottom > 0;
+
+    if (alreadyVisible) {
+      // Already in viewport on load — show immediately, no animation
+      el.classList.add('is-visible');
+      return;
+    }
+
+    // Below fold — stagger within parent, then observe
+    var parent = el.parentElement;
+    var idx = seen.has(parent) ? seen.get(parent) : 0;
+    seen.set(parent, idx + 1);
+    el.classList.add('reveal');
+    el.style.transitionDelay = Math.min(idx * 0.08, 0.3) + 's';
+    observer.observe(el);
+  });
 })();
