@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Prakash Madai" />
   <meta name="description" content="Prakash Madai, GIS Solutions Engineer. 5+ years building geospatial platforms, ArcGIS Enterprise systems, and automated spatial pipelines for government operations." />
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
   <meta property="og:title" content="Prakash Madai · GIS Solutions Engineer" />
   <meta property="og:description" content="5+ years building geospatial platforms for government operations: E9-1-1 systems, ArcGIS Enterprise, automated data pipelines." />
   <meta property="og:type" content="website" />
@@ -141,7 +143,7 @@
             </div>
             <div class="hs-right">
               <img class="hs-img" src="images/certs/arcgis_pro_foundation.png" alt="ArcGIS Pro Foundation 2025"
-                onerror="this.style.display='none'" />
+                loading="lazy" onerror="this.style.display='none'" />
             </div>
           </div>
 
@@ -162,7 +164,7 @@
             </div>
             <div class="hs-right">
               <img class="hs-img" src="images/certs/comptia.jpg" alt="CompTIA Data+"
-                onerror="this.style.display='none'" />
+                loading="lazy" onerror="this.style.display='none'" />
             </div>
           </div>
 
@@ -186,7 +188,7 @@
             </div>
             <div class="hs-right">
               <img class="hs-img" src="images/certs/dp600.png" alt="Microsoft Fabric"
-                onerror="this.style.display='none'" />
+                loading="lazy" onerror="this.style.display='none'" />
             </div>
           </div>
 
@@ -207,7 +209,7 @@
             </div>
             <div class="hs-right">
               <img class="hs-img" src="images/certs/green_belt.png" alt="Lean Six Sigma"
-                onerror="this.style.display='none'" />
+                loading="lazy" onerror="this.style.display='none'" />
             </div>
           </div>
 
@@ -226,7 +228,7 @@
               </div>
             </div>
             <div class="hs-right">
-              <img class="hs-img" src="images/certs/un.png" alt="Utility Network" onerror="this.style.display='none'" />
+              <img class="hs-img" src="images/certs/un.png" alt="Utility Network" loading="lazy" onerror="this.style.display='none'" />
             </div>
           </div>
 
@@ -246,7 +248,7 @@
             </div>
             <div class="hs-right">
               <img class="hs-img" src="images/certs/python_scripts.jpeg" alt="Python for ArcGIS"
-                onerror="this.style.display='none'" />
+                loading="lazy" onerror="this.style.display='none'" />
             </div>
           </div>
 
@@ -266,7 +268,7 @@
             </div>
             <div class="hs-right">
               <img class="hs-img" src="images/certs/workflow.jpeg" alt="Admin Workflows"
-                onerror="this.style.display='none'" />
+                loading="lazy" onerror="this.style.display='none'" />
             </div>
           </div>
 
@@ -286,12 +288,13 @@
             </div>
             <div class="hs-right">
               <img class="hs-img" src="images/certs/base_deploy.jpeg" alt="Base Deployment"
-                onerror="this.style.display='none'" />
+                loading="lazy" onerror="this.style.display='none'" />
             </div>
           </div>
         </div>
 
         <div class="hs-dots" aria-label="Slide dots"></div>
+        <button class="hs-pause" type="button" aria-label="Pause slideshow">&#9646;&#9646;</button>
       </div>
     </div>
   </section>
@@ -478,7 +481,7 @@
       <div class="grid cards-1">
         <a class="card edu-card edu-link" href="https://www.utpb.edu/" target="_blank" rel="noopener">
           <div class="edu-left">
-            <img src="images/utpb.png" class="edu-logo" alt="UTPB" onerror="this.style.display='none'" />
+            <img src="images/utpb.png" class="edu-logo" alt="UTPB" loading="lazy" onerror="this.style.display='none'" />
           </div>
           <div class="edu-right">
             <b>Master of Science - Computer Science (Data Science Track)</b>
@@ -493,7 +496,7 @@
 
         <a class="card edu-card edu-link" href="https://ioe.tu.edu.np/" target="_blank" rel="noopener">
           <div class="edu-left">
-            <img src="images/tu.png" class="edu-logo" alt="Tribhuvan University" onerror="this.style.display='none'" />
+            <img src="images/tu.png" class="edu-logo" alt="Tribhuvan University" loading="lazy" onerror="this.style.display='none'" />
           </div>
           <div class="edu-right">
             <b>Bachelor of Engineering - Computer Engineering</b>
@@ -556,8 +559,11 @@
       const prevBtn = slider.querySelector('.hs-nav.prev');
       const nextBtn = slider.querySelector('.hs-nav.next');
       const dotsWrap = slider.querySelector('.hs-dots');
+      const pauseBtn = slider.querySelector('.hs-pause');
 
       let idx = 0;
+      let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let timer = null;
 
       // Build dots
       dotsWrap.innerHTML = '';
@@ -581,6 +587,29 @@
         render();
       }
 
+      function startTimer() {
+        if (paused) return;
+        timer = setInterval(() => goTo(idx + 1), 9000);
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+        timer = null;
+      }
+
+      if (pauseBtn) {
+        if (paused) {
+          pauseBtn.setAttribute('aria-label', 'Play slideshow');
+          pauseBtn.innerHTML = '&#9654;';
+        }
+        pauseBtn.addEventListener('click', () => {
+          paused = !paused;
+          pauseBtn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+          pauseBtn.innerHTML = paused ? '&#9654;' : '&#9646;&#9646;';
+          if (paused) stopTimer(); else startTimer();
+        });
+      }
+
       prevBtn.addEventListener('click', () => goTo(idx - 1));
       nextBtn.addEventListener('click', () => goTo(idx + 1));
 
@@ -590,10 +619,9 @@
       });
       slider.tabIndex = 0;
 
-      let timer = setInterval(() => goTo(idx + 1), 9000);
-      slider.addEventListener('mouseenter', () => clearInterval(timer));
-      slider.addEventListener('mouseleave', () => {
-        timer = setInterval(() => goTo(idx + 1), 9000);
-      });
+      slider.addEventListener('mouseenter', stopTimer);
+      slider.addEventListener('mouseleave', startTimer);
+
+      startTimer();
     })();
   </script>
