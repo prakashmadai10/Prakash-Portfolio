@@ -27,7 +27,7 @@
   <main id="main-content">
   <header class="page-header">
     <div class="container">
-      <h1 class="ph-title">Projects</h1>
+      <h1 class="ph-title">Projects <span class="ph-count">09</span></h1>
       <p class="ph-desc">Automation scripts, web GIS apps, dashboards, and geospatial data tools built in production environments.</p>
       <div class="page-metrics" aria-label="Project focus areas">
         <span><i class="fa fa-globe" aria-hidden="true"></i> WEB GIS</span>
@@ -53,6 +53,40 @@
       <!-- PROJECT GRID -->
       <div class="proj-grid" id="projGrid">
 
+        <!-- FEATURED: Most Travelled Corridor Case Study -->
+        <div class="proj-card proj-card--featured" data-tags="governance">
+          <div class="proj-meta">
+            <div class="proj-cat">Code Enforcement</div>
+            <div class="proj-date">ArcGIS Dashboard</div>
+          </div>
+
+          <div class="proj-image-wrap">
+            <img src="images/cover.png" alt="Most Travelled Corridor code enforcement GIS dashboard" class="proj-img" loading="lazy"
+              onerror="this.src='images/web_image_background-small.jpg';" />
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-title">Most Travelled Corridor - Code Enforcement</div>
+            <p class="proj-desc">
+              Spatial analysis and dashboard identifying high-frequency code enforcement corridors to help field
+              inspectors prioritize routes and reduce response time. Includes full architecture, workflow, and
+              outcome documentation.
+            </p>
+            <div class="proj-tags">
+              <span class="proj-tag">ArcGIS Dashboard</span>
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">ArcPy</span>
+              <span class="proj-tag">Spatial Analysis</span>
+            </div>
+            <div>
+              <span class="proj-badge">Case Study</span>
+            </div>
+            <a class="proj-btn" href="projects/code-enforcement-gis-automation.html">
+              READ CASE STUDY
+            </a>
+          </div>
+        </div>
+
         <!-- Zoning Cases Dashboard -->
         <div class="proj-card" data-tags="gis dashboards governance planning web-apps">
           <div class="proj-meta">
@@ -71,7 +105,11 @@
               An interactive GIS dashboard for tracking zoning applications, hearing status, plan reviews,
               and spatial distribution of cases to support planning staff and decision-makers.
             </p>
-
+            <div class="proj-tags">
+              <span class="proj-tag">ArcGIS Dashboard</span>
+              <span class="proj-tag">Portal</span>
+              <span class="proj-tag">ArcGIS Hub</span>
+            </div>
             <a class="proj-btn"
               href="https://geostation-comgis.hub.arcgis.com/apps/b19c3643d9df41d7942e47ac5f040d28/explore"
               target="_blank">
@@ -80,9 +118,7 @@
           </div>
         </div>
 
-
-
-        <!-- 8 (NEW) Fire Hydrants Locator -->
+        <!-- Fire Hydrants Locator -->
         <div class="proj-card" data-tags="web-apps">
           <div class="proj-meta">
             <div class="proj-cat">Web GIS App</div>
@@ -100,7 +136,11 @@
               A nearby search experience for locating hydrants quickly in the field (distance slider + map-centric
               workflow).
             </p>
-
+            <div class="proj-tags">
+              <span class="proj-tag">ArcGIS Instant Apps</span>
+              <span class="proj-tag">Field Work</span>
+              <span class="proj-tag">AGOL</span>
+            </div>
             <a class="proj-btn"
               href="https://ogis.maps.arcgis.com/apps/instant/nearby/index.html?appid=1907fc1e990f4295843fe9bced60bd3e&sliderDistance=500"
               target="_blank">
@@ -109,30 +149,7 @@
           </div>
         </div>
 
-        <!-- 9 (LOCAL DETAIL PAGE EXAMPLE) -->
-        <div class="proj-card" data-tags="governance">
-          <div class="proj-meta">
-            <div class="proj-cat">Most Travelled Corridor - Code Enforcement</div>
-            <div class="proj-date">ArcGIS Dashboard</div>
-          </div>
-
-          <div class="proj-image-wrap">
-            <img src="images/cover.png" alt="Project detail page" class="proj-img" loading="lazy"
-              onerror="this.src='images/web_image_background-small.jpg';" />
-          </div>
-
-          <div class="proj-body">
-            <div class="proj-title">Most Travelled Corridor - Code Enforcement</div>
-            <p class="proj-desc">
-              A dedicated project page hosted inside this portfolio (screenshots, architecture, workflow, and outcomes).
-            </p>
-
-            <a class="proj-btn" href="projects/code-enforcement-gis-automation.html">
-              OPEN DETAILS
-            </a>
-          </div>
-        </div>
-        <!-- 5 -->
+        <!-- ArcGIS Portal & AGOL Audit Toolkit -->
         <div class="proj-card" data-tags="governance monitoring">
           <div class="proj-meta">
             <div class="proj-cat">Governance</div>
@@ -140,7 +157,7 @@
           </div>
 
           <div class="proj-image-wrap">
-            <img src="images/d1.jpg" alt="Audit toolkit" class="proj-img" loading="lazy"
+            <img src="images/d1.jpg" alt="ArcGIS Portal and AGOL audit toolkit dashboard" class="proj-img" loading="lazy"
               onerror="this.src='images/web_image_background-small.jpg';" />
           </div>
 
@@ -150,23 +167,28 @@
               Audit reporting for users, items, sharing, and governance checks to support compliance and cleanup
               initiatives.
             </p>
-
-            <!-- If you want this one to open your local detail page instead of GitHub, change href to x.html -->
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">ArcGIS API</span>
+              <span class="proj-tag">Governance</span>
+              <span class="proj-tag">Excel</span>
+            </div>
             <a class="proj-btn" href="https://github.com/prakashmadai10/ArcGIS-for-Portal-and-AGOL-AUDIT/tree/main"
               target="_blank">
-              LEARN MORE
+              VIEW ON GITHUB
             </a>
           </div>
         </div>
-        <!-- 1 -->
+
+        <!-- AGOL Hosted Feature Layer Backup -->
         <div class="proj-card" data-tags="automation web-apps">
           <div class="proj-meta">
             <div class="proj-cat">GIS Automation</div>
-            <div class="proj-date">ArcGIS Online • Backup</div>
+            <div class="proj-date">ArcGIS Online · Backup</div>
           </div>
 
           <div class="proj-image-wrap">
-            <img src="images/d2.jpg" alt="AGOL backup project" class="proj-img" loading="lazy"
+            <img src="images/d2.jpg" alt="AGOL hosted feature layer backup automation" class="proj-img" loading="lazy"
               onerror="this.src='images/web_image_background-small.jpg';" />
           </div>
 
@@ -176,24 +198,29 @@
               Automated backups for hosted feature layers to FGDB and cleanup routines for maintaining a reliable
               production environment.
             </p>
-
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">ArcGIS API</span>
+              <span class="proj-tag">FGDB</span>
+              <span class="proj-tag">Automation</span>
+            </div>
             <a class="proj-btn"
               href="https://github.com/prakashmadai10/AGOL-Hosted-Feature-Layer-Backup-FGDB-Cleanup-Python"
               target="_blank">
-              LEARN MORE
+              VIEW ON GITHUB
             </a>
           </div>
         </div>
 
-        <!-- 3 -->
+        <!-- Enable Bulk Export/Extract -->
         <div class="proj-card" data-tags="automation">
           <div class="proj-meta">
             <div class="proj-cat">ArcGIS Online</div>
-            <div class="proj-date">ArcGIS Hub (Open Data) </div>
+            <div class="proj-date">ArcGIS Hub (Open Data)</div>
           </div>
 
           <div class="proj-image-wrap">
-            <img src="images/bkp.png" alt="Bulk export enablement" class="proj-img" loading="lazy"
+            <img src="images/bkp.png" alt="Bulk export enablement script for hosted layers" class="proj-img" loading="lazy"
               onerror="this.src='images/web_image_background-small.jpg';" />
           </div>
 
@@ -203,24 +230,28 @@
               Bulk-enable export/extract capabilities across hosted feature layers and views to streamline operations
               and compliance.
             </p>
-
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">ArcGIS API</span>
+              <span class="proj-tag">ArcGIS Hub</span>
+            </div>
             <a class="proj-btn"
               href="https://github.com/prakashmadai10/ArcGIS-Online-Enable-Bulk-Export-Extract-on-Hosted-Feature-Layers-Views"
               target="_blank">
-              LEARN MORE
+              VIEW ON GITHUB
             </a>
           </div>
         </div>
 
-        <!-- 4 -->
+        <!-- Distributed Collaboration Sync Log Collector -->
         <div class="proj-card" data-tags="monitoring governance">
           <div class="proj-meta">
             <div class="proj-cat">Data Synchronization</div>
-            <div class="proj-date">Portal ↔ AGOL</div>
+            <div class="proj-date">Portal · AGOL</div>
           </div>
 
           <div class="proj-image-wrap">
-            <img src="images/d1.jpg" alt="Sync log collector" class="proj-img" loading="lazy"
+            <img src="images/utpb.png" alt="Portal to AGOL sync log collector output" class="proj-img" loading="lazy"
               onerror="this.src='images/web_image_background-small.jpg';" />
           </div>
 
@@ -229,15 +260,21 @@
             <p class="proj-desc">
               Collects and summarizes sync logs for Portal-AGOL collaboration to speed up troubleshooting and reporting.
             </p>
-
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">Portal</span>
+              <span class="proj-tag">AGOL</span>
+              <span class="proj-tag">Logging</span>
+            </div>
             <a class="proj-btn"
               href="https://github.com/prakashmadai10/Distributed-Collaboration-Sync-Log-Collector-Portal-AGOL"
               target="_blank">
-              LEARN MORE
+              VIEW ON GITHUB
             </a>
           </div>
         </div>
-        <!-- SQL Server Monitoring -->
+
+        <!-- SQL Server Backup & Job Monitoring -->
         <div class="proj-card" data-tags="monitoring automation sql-server">
           <div class="proj-meta">
             <div class="proj-cat">Database Monitoring</div>
@@ -245,7 +282,7 @@
           </div>
 
           <div class="proj-image-wrap">
-            <img src="images/db.jpeg" alt="SQL Server jobs and backup monitoring" class="proj-img" loading="lazy"
+            <img src="images/db.jpeg" alt="SQL Server jobs and backup monitoring automation" class="proj-img" loading="lazy"
               onerror="this.src='images/web_image_background-small.jpg';" />
           </div>
 
@@ -256,15 +293,20 @@
               multiple instances, generating formatted Excel reports and emailing alerts to reduce
               manual DBA effort and improve reliability.
             </p>
-
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">SQL Server</span>
+              <span class="proj-tag">Excel</span>
+              <span class="proj-tag">Alerting</span>
+            </div>
             <a class="proj-btn" href="https://github.com/prakashmadai10/SQL-Server-backup-and-Job-monitoring"
               target="_blank">
-              LEARN MORE
+              VIEW ON GITHUB
             </a>
           </div>
         </div>
 
-        <!-- Real-Time Analytics -->
+        <!-- Real-Time Geospatial Analytics -->
         <div class="proj-card" data-tags="real-time web-apps">
           <div class="proj-meta">
             <div class="proj-cat">Real-Time Analytics</div>
@@ -272,7 +314,7 @@
           </div>
 
           <div class="proj-image-wrap">
-            <img src="images/1781.jpg" alt="Real-time analytics" class="proj-img" loading="lazy"
+            <img src="images/1781.jpg" alt="Real-time geospatial analytics visualization" class="proj-img" loading="lazy"
               onerror="this.src='images/web_image_background-small.jpg';" />
           </div>
 
@@ -282,10 +324,15 @@
               Demonstrates real-time geospatial analytics and visualization patterns for operational monitoring and
               decision support.
             </p>
-
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">ArcGIS</span>
+              <span class="proj-tag">Real-Time</span>
+              <span class="proj-tag">Visualization</span>
+            </div>
             <a class="proj-btn" href="https://github.com/prakashmadai10/Real-Time-Geospatial-Analytics-Visualization"
               target="_blank">
-              LEARN MORE
+              VIEW ON GITHUB
             </a>
           </div>
         </div>
@@ -333,3 +380,5 @@
       });
     })();
   </script>
+</body>
+</html>
