@@ -706,7 +706,7 @@ p {
 /* Boundary polygon animated draw */
 .atlas-boundary {
   fill: rgba(34, 197, 94, 0.04);
-  stroke: #087a54;
+  stroke: var(--green);
   stroke-width: 1.2;
   stroke-dasharray: 8 5;
   stroke-dashoffset: 0;
@@ -719,7 +719,7 @@ p {
 
 /* Network lines — draw in with staggered delays */
 .atlas-net-line {
-  stroke: #087a54;
+  stroke: var(--green);
   stroke-width: 0.9;
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
@@ -785,7 +785,7 @@ p {
 
 /* Hex bin aggregation cells */
 .atlas-hex {
-  fill: #087a54;
+  fill: var(--green);
   fill-opacity: 0.05;
   stroke-opacity: 0.3;
   animation: hex-flicker var(--d, 4s) var(--delay, 0s) ease-in-out infinite alternate;
@@ -1098,7 +1098,7 @@ p {
 }
 
 .skill-item {
-  color: #35494f;
+  color: var(--ink-soft);
   font-size: 0.72rem;
   font-weight: 500;
   line-height: 1.5;
@@ -1161,14 +1161,14 @@ p {
   box-shadow: 7px 7px 0 var(--capability-color);
 }
 
-.capability-automation { --capability-color: #16758a; }
-.capability-webgis { --capability-color: #087a54; }
-.capability-data { --capability-color: #a36b1f; }
-.capability-mobile { --capability-color: #16758a; }
-.capability-databases { --capability-color: #087a54; }
-.capability-programming { --capability-color: #a36b1f; }
-.capability-cloud { --capability-color: #16758a; }
-.capability-governance { --capability-color: #a36b1f; }
+.capability-automation { --capability-color: var(--accent-blue); }
+.capability-webgis { --capability-color: var(--green); }
+.capability-data { --capability-color: var(--accent-amber); }
+.capability-mobile { --capability-color: var(--accent-blue); }
+.capability-databases { --capability-color: var(--green); }
+.capability-programming { --capability-color: var(--accent-amber); }
+.capability-cloud { --capability-color: var(--accent-blue); }
+.capability-governance { --capability-color: var(--accent-amber); }
 
 .capability-topline {
   position: relative;
@@ -2179,7 +2179,7 @@ p {
 }
 
 .achievement-second .award-topline > span:first-child {
-  color: #a36b1f;
+  color: var(--accent-amber);
 }
 
 .pub-meta {
@@ -2349,7 +2349,7 @@ p {
 }
 
 .case-study-page .diagram img {
-  background: #fff;
+  background: var(--paper);
 }
 
 .case-study-page .steps {
