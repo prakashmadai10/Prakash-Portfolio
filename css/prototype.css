@@ -3150,6 +3150,33 @@ html[data-theme='light'] .achievement-card:hover {
   }
 }
 
+/* ── Project employer section headers ─────────────────── */
+.proj-section-header {
+  grid-column: 1 / -1;
+  padding: 2rem 0 0.75rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.proj-section-header:first-child { border-top: none; padding-top: 0; }
+.proj-employer-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.proj-employer-meta {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
