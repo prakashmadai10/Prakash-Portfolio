@@ -1945,12 +1945,14 @@ p {
   border-radius: 0;
   background: transparent;
   color: var(--green);
+  box-shadow: none;
 }
 
 .job-btn:hover,
 .job-extra-btn:hover {
   background: var(--acid);
   color: var(--ink);
+  box-shadow: none;
 }
 
 /* Projects */
@@ -2087,20 +2089,39 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: auto;
+}
+
+.proj-btn-row .proj-btn {
+  margin-top: 0;
 }
 
 .proj-btn {
   display: inline-block;
+  align-items: unset;
+  justify-content: unset;
+  gap: 0;
+  padding: 0;
+  margin-top: auto;
+  border: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
   color: var(--green);
   font-family: var(--font-mono);
   font-size: var(--text-3);
+  font-weight: 600;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  border-bottom: 1px solid transparent;
+  text-decoration: none;
   transition: border-color var(--transition-snappy) ease, opacity var(--transition-snappy) ease;
 }
 
 .proj-btn:hover {
+  transform: none;
+  background: none;
+  box-shadow: none;
   border-color: var(--green);
 }
 
