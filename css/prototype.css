@@ -1606,6 +1606,7 @@ p {
 .hs-nav:hover {
   background: var(--acid);
   color: var(--ink);
+  box-shadow: none;
 }
 
 .hs-dot {
@@ -1614,6 +1615,7 @@ p {
 
 .hs-dot.active {
   background: var(--green);
+  box-shadow: none;
 }
 
 /* Education */
@@ -3132,16 +3134,22 @@ html[data-theme='light'] .achievement-card:hover {
   }
 }
 
-/* ── Project employer section headers ─────────────────── */
-.proj-section-header {
+/* ── Project employer index (single compact row) ──────── */
+.proj-employer-index {
   grid-column: 1 / -1;
-  padding: 2rem 0 0.75rem;
-  border-top: 1px solid var(--rule);
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.75rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
 }
-.proj-section-header:first-child { border-top: none; padding-top: 0; }
+.proj-employer-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
 .proj-employer-label {
   font-family: var(--font-mono);
   font-size: var(--text-2);
@@ -3152,7 +3160,7 @@ html[data-theme='light'] .achievement-card:hover {
 }
 .proj-employer-meta {
   font-family: var(--font-mono);
-  font-size: var(--text-2);
+  font-size: var(--text-1);
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;

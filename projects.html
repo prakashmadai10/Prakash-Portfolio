@@ -61,10 +61,24 @@
       <!-- PROJECT GRID -->
       <div class="proj-grid" id="projGrid">
 
-        <!-- ===== STATE OF NEW HAMPSHIRE ===== -->
-        <div class="proj-section-header">
-          <span class="proj-employer-label">State of New Hampshire</span>
-          <span class="proj-employer-meta">04/2026 · Present</span>
+        <!-- ===== EMPLOYER INDEX ===== -->
+        <div class="proj-employer-index">
+          <span class="proj-employer-item">
+            <span class="proj-employer-label">State of New Hampshire</span>
+            <span class="proj-employer-meta">04/2026 · Present</span>
+          </span>
+          <span class="proj-employer-item">
+            <span class="proj-employer-label">City of Midland, Texas</span>
+            <span class="proj-employer-meta">07/2025 - 01/2026</span>
+          </span>
+          <span class="proj-employer-item">
+            <span class="proj-employer-label">City of Odessa, Texas</span>
+            <span class="proj-employer-meta">03/2024 - 06/2025</span>
+          </span>
+          <span class="proj-employer-item">
+            <span class="proj-employer-label">Open Source</span>
+            <span class="proj-employer-meta">GitHub · prakashmadai10</span>
+          </span>
         </div>
 
         <!-- NG911 Address Management Platform -->
@@ -171,11 +185,6 @@
           </div>
         </div>
 
-        <!-- ===== CITY OF MIDLAND ===== -->
-        <div class="proj-section-header">
-          <span class="proj-employer-label">City of Midland, Texas</span>
-          <span class="proj-employer-meta">07/2025 - 01/2026</span>
-        </div>
 
         <!-- Zoning Cases Dashboard -->
         <div class="proj-card" data-tags="dashboards governance web-apps">
@@ -323,11 +332,6 @@
           </div>
         </div>
 
-        <!-- ===== CITY OF ODESSA ===== -->
-        <div class="proj-section-header">
-          <span class="proj-employer-label">City of Odessa, Texas</span>
-          <span class="proj-employer-meta">03/2024 - 06/2025</span>
-        </div>
 
         <!-- Fire Hydrants Locator -->
         <div class="proj-card" data-tags="web-apps">
@@ -379,11 +383,6 @@
         </div>
 
         <!-- ===== OPEN SOURCE / GITHUB ===== -->
-        <div class="proj-section-header">
-          <span class="proj-employer-label">Open Source</span>
-          <span class="proj-employer-meta">GitHub · prakashmadai10</span>
-        </div>
-
         <!-- ArcGIS Portal & AGOL Audit Toolkit -->
         <div class="proj-card" data-tags="governance monitoring">
           <div class="proj-meta">
@@ -578,7 +577,7 @@
     (function () {
       const btns = document.querySelectorAll('.filter-btn');
       const cards = document.querySelectorAll('.proj-card');
-      const headers = document.querySelectorAll('.proj-section-header');
+      const headers = document.querySelectorAll('.proj-employer-index');
 
       function applyFilter(tag) {
         btns.forEach(function (b) {
